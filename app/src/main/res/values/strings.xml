@@ -1,0 +1,17 @@
+<resources>
+    <string name="text_odontologo">odontologo</string>
+    <string name="text_paciente">paciente</string>
+
+    <!--  Interfaz de Login  -->
+    <string name="app_name">MolarDentalCareApp</string>
+    <string name="mensaje_inicia_sesion">Inicia Sesión para continuar.</string>
+    <string name="mensaje_btn_ingresar">Ingresar</string>
+    <string name="hint_user">Ingrese su usuario</string>
+    <string name="hint_password">Ingrese su contraseña</string>
+
+    <!--  Interfaz de Bievenida  -->
+    <string name="mensaje_bienvenida">¡Bienvenido!</string>
+
+    <!--  Interfaz de Dashboard  -->
+    <string name="descripcion_dashboard">¿Tienes planes para hoy?</string>
+</resources>
