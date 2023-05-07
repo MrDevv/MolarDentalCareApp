@@ -1,4 +1,4 @@
-package com.ucv.edu.molardentalcareapp.ui
+package com.ucv.edu.molardentalcareapp.ui.dashboard
 
 import android.app.Activity
 import android.content.Intent
@@ -11,7 +11,7 @@ import com.ucv.edu.molardentalcareapp.data.operacionesOdontologo
 import com.ucv.edu.molardentalcareapp.data.operacionesPaciente
 import com.ucv.edu.molardentalcareapp.databinding.ActivityDashboardUsuarioBinding
 import com.ucv.edu.molardentalcareapp.entity.Operacion
-import com.ucv.edu.molardentalcareapp.ui.dashboard.ServiciosAdapter
+import com.ucv.edu.molardentalcareapp.ui.dashboard.adapter.OperacionesAdapter
 import com.ucv.edu.molardentalcareapp.ui.odontologo.CitaActivity
 import com.ucv.edu.molardentalcareapp.ui.odontologo.HorarioAtencionActivity
 import com.ucv.edu.molardentalcareapp.ui.odontologo.PacienteActivity
@@ -23,8 +23,8 @@ class DashboardUsuarioActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityDashboardUsuarioBinding
 
-    private val serviciosAdapter: ServiciosAdapter by lazy {
-        ServiciosAdapter() { servicio -> irAServicio(servicio) }
+    private val operacionesAdapter: OperacionesAdapter by lazy {
+        OperacionesAdapter() { servicio -> irAServicio(servicio) }
     }
 
     companion object {
@@ -52,14 +52,14 @@ class DashboardUsuarioActivity : AppCompatActivity() {
         if (rol.equals(ODONTOLOGO)) {
             binding.ivImagenDashboard.setImageResource(R.drawable.ic_dashboard_odontologo)
             binding.tvRol.text = getText(R.string.text_odontologo)
-            serviciosAdapter.enviarDatos(operacionesOdontologo)
+            operacionesAdapter.enviarDatos(operacionesOdontologo)
         } else if (rol.equals(PACIENTE)) {
             binding.ivImagenDashboard.setImageResource(R.drawable.ic_dashboard_paciente)
             binding.tvRol.text = getText(R.string.text_paciente)
-            serviciosAdapter.enviarDatos(operacionesPaciente)
+            operacionesAdapter.enviarDatos(operacionesPaciente)
         }
         binding.rvServicios.layoutManager = LinearLayoutManager(this)
-        binding.rvServicios.adapter = serviciosAdapter
+        binding.rvServicios.adapter = operacionesAdapter
     }
 
     fun irAServicio(operacion: Operacion) {

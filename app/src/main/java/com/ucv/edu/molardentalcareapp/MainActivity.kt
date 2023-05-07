@@ -1,12 +1,9 @@
 package com.ucv.edu.molardentalcareapp
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.appcompat.widget.AppCompatButton
-import androidx.appcompat.widget.AppCompatEditText
 import com.ucv.edu.molardentalcareapp.databinding.ActivityMainBinding
-import com.ucv.edu.molardentalcareapp.ui.DashboardUsuarioActivity
+import com.ucv.edu.molardentalcareapp.ui.dashboard.DashboardUsuarioActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding

@@ -30,7 +30,7 @@
             android:name=".ui.odontologo.HorarioAtencionActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.DashboardUsuarioActivity"
+            android:name=".ui.dashboard.DashboardUsuarioActivity"
             android:exported="false"
             android:theme="@style/Theme.Dashboard" />
         <activity
